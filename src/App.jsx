@@ -1,4 +1,6 @@
 import Home from "./components/Home";
+import New from "./components/New";
+import Header from "./components/Header";
 
 import {
   BrowserRouter as Router,
@@ -8,16 +10,21 @@ import {
 
 const App = () => {
   return (
-    <Router>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-    </Router>
+    <>
+      <Router>
+        <Header />
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/new">
+              <New />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+      </Router>
+    </>
   );
 
 }

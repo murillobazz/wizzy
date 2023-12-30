@@ -1,6 +1,6 @@
-import Header from './Header';
 import Welcome from './Welcome';
-// import Card from './components/Card';
+import Card from './Card';
+import Button from './Button';
 import CampaignsList from './CampaignsList';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -28,11 +28,13 @@ const Home = () => {
   
   return (
     <div>
-      <Header />
       <div className="mx-auto p-3 max-w-screen-md flex flex-col justify-center">
-        <Welcome username={'Murillo'} greetings={'Got your spellbook ready?'}/>
-        {/* <Card /> */}
-        <CampaignsList campaigns={campaigns}></CampaignsList>
+        <Welcome username={'User'} greetings={'Got your spellbook ready?'}/>
+        <div className="flex gap-6 items-start">
+          {campaigns.length > 0 && <Card className="grow" campaign={campaigns[campaigns.length - 1]}/>}
+          <Button></Button>
+        </div>
+        {campaigns.length > 0 && <CampaignsList campaigns={campaigns}></CampaignsList>}
       </div>
     </div>
   )

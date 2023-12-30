@@ -7,8 +7,12 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --primary: #5F2312;
+  --secondary: #42170A;
+  --background: #F0DED3;
+
   color-scheme: light dark;
-  background-color: #F0DED3;
+  background-color: var(--background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,14 +29,62 @@ body {
 
 h1 {
   font-size: 2rem;
-  color: #5F2312;
+  color: var(--primary);
 }
 
 p {
-  color: #42170A;
+  color: var(--secondary);
 }
 
 a {
-  color: #5F2312;
+  color: var(--primary);
   text-decoration: underline;
+}
+
+.custom-btn {
+  text-decoration: none;
+}
+
+.custom-btn:hover,
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: rgb(240, 216, 203);
+}
+
+.custom-btn:focus {
+  background-color: rgb(240, 216, 203);
+  box-shadow: 2px 2px 0 0 var(--secondary);
+}
+
+.submit-btn {
+  color: var(--secondary);
+  box-shadow: 1px 1px 0 0 var(--secondary);
+}
+
+.submit-btn:focus {
+  box-shadow: none;
+}
+
+.form-input {
+  background-color: var(--secondary);
+  color: var(--background);
+  border: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-input::placeholder {
+  color: rgb(148 163 184);
+}
+
+.submit-btn:disabled {
+  background-color: darkgrey;
+  cursor: default;
+}
+
+summary {
+  color: var(--secondary);
+}
+
+option {
+  color: var(--background);
 }
