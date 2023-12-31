@@ -1,5 +1,5 @@
 # Wizzy
-#### Video demo: 
+#### Video demo: https://youtu.be/kMUnxbigh_c
 ## Description: 
 Wizzy is a React Web App that works as TTRPG campaigns manager. It uses [React](https://react.dev/), [Tailwindcss](https://tailwindcss.com/), [ReactRouter](https://v5.reactrouter.com/), [axios](https://axios-http.com/) and [ReactHookForm](https://react-hook-form.com/) as its core technologies, and was set up with [Vite](https://vitejs.dev/).
 This project is a work in progress, as with its current functionalities, it is still in version 0.0.1.
