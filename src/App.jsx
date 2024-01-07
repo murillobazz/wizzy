@@ -1,10 +1,11 @@
 import Home from "./components/Home";
 import New from "./components/New";
 import Header from "./components/Header";
+import Login from "./components/Login";
 
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
 } from "react-router-dom";
 
@@ -13,16 +14,11 @@ const App = () => {
     <>
       <Router>
         <Header />
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
-          <Switch>
-            <Route path="/new">
-              <New />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/login" element={ <Login /> } />
+            <Route path="/new" element={ <New /> } />
+            <Route path="/" element={ <Home /> } />
+          </Routes>
       </Router>
     </>
   );

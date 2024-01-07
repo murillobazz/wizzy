@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { redirect } from 'react-router-dom';
 
 const New = () => {
   // const [numberOfCharacters, setNumberOfCharacters] = useState(1);
@@ -32,6 +33,7 @@ const New = () => {
       })
 
     setLoading(false);
+    return redirect("/home");
   };
 
   return (
