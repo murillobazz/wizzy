@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
-import { redirect } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { redirect, useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 const New = () => {
   // const [numberOfCharacters, setNumberOfCharacters] = useState(1);
@@ -9,6 +10,14 @@ const New = () => {
   const [loading, setLoading] = useState(false);
 
   let url = `${import.meta.env.VITE_WIZZY_API}/api/campaigns`;
+  const token = Cookies.get('token');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (submitStatus === 'Campaign created!') {
+      navigate('/');
+    }
+  }, [submitStatus])
 
   const {
     register,
@@ -22,7 +31,7 @@ const New = () => {
 
     data.characters.forEach(character => character.level = 1)
 
-    await axios.post(url, data)
+    await axios.post(url, data, { headers: {'Authorization': `Bearer ${token}`} })
       .then(response => {
         console.log(response);
         setSubmitStatus("Campaign created!")

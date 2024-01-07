@@ -4,22 +4,21 @@ import Button from './Button';
 import CampaignsList from './CampaignsList';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 
 
 const Home = () => {
   const [campaigns, setCampaigns] = useState([]);
-  
+  const token = Cookies.get('token');
   useEffect(() => {
     const fetchData = async () => {
-      await axios.get(`${import.meta.env.VITE_WIZZY_API}/api/campaigns`)
-      .then(response => {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_WIZZY_API}/api/campaigns`, { headers: {'Authorization': `Bearer ${token}`} })
         setCampaigns(response.data);
-        // console.log(campaigns);
-        // console.log(response.data)
-      })
-      .catch(error => console.log(error))
+      } catch(error) {
+        console.log(error);
+      }
     }
-  
     async function getCampaigns() {
       await fetchData()
     }
