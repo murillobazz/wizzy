@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 const New = () => {
+  // TODO
   // const [numberOfCharacters, setNumberOfCharacters] = useState(1);
   const [submitStatus, setSubmitStatus] = useState("");
   const [loading, setLoading] = useState(false);
