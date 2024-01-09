@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { useState, useEffect } from 'react';
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 const New = () => {
@@ -42,7 +42,6 @@ const New = () => {
       })
 
     setLoading(false);
-    return redirect("/home");
   };
 
   return (
