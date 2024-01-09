@@ -10,10 +10,10 @@ Wizzy has its own API, developed by myself as well, it runs on [express.js](http
 > As a work in progress, 'Wizzy' still has a lot of features to be added and/or polished and issues to be fixed. In this roadmap we attain to the next things to be implemented on a large scale, but each item has several minor updates within itself, and 
 - [x] Home page
 - [x] Campaign creation
+- [x] Login page
+- [x] Sign out
 - [ ] Campaign deletion
-- [ ] Login page
 - [ ] Register page
-- [ ] Log out
 - [ ] Campaign edit
 - [ ] Friend list
 - [ ] Session planner (invite your friends to sessions)
