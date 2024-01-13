@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 const Card = ({campaign}) => {
 
   return (
-    <div className="py-3 px-5 mb-5 border border-amber-950 rounded-3xl max-w-lg shadow-[4px_4px_0_0_rgba(66,23,10,1)]">
+    <div className="py-3 px-5 mb-5 border border-amber-950 rounded-3xl max-w-lg shadow-[4px_4px_0_0_rgba(66,23,10,1)] sm:w-1/2 w-full">
       <p className="text-xs font-bold text-neutral-500 mb-1">Most recent campaign</p>
       <div className="mb-3">
         <h1 className="font-bold mb-1 leading-none">{campaign.title}</h1>

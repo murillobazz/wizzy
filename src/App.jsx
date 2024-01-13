@@ -1,5 +1,5 @@
 import Home from "./components/Home";
-import New from "./components/New";
+import NewCampaignPage from "./components/NewCampaignPage";
 import Header from "./components/Header";
 import Login from "./components/Login";
 
@@ -16,7 +16,7 @@ const App = () => {
         <Header />
           <Routes>
             <Route path="/login" element={ <Login /> } />
-            <Route path="/new" element={ <New /> } />
+            <Route path="/new" element={ <NewCampaignPage /> } />
             <Route path="/" element={ <Home /> } />
           </Routes>
       </Router>

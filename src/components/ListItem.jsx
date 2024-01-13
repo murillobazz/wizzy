@@ -7,7 +7,7 @@ const ListItem = (props) => {
         <p className="text-lg"><b>{props.title}</b></p>
         <p className="text-xs">A <b>{props.category}</b> adventure</p>
       </div>
-      <p><b>x</b></p>
+      <button><p className="font-bold">x</p></button>
     </div>
   )
 }

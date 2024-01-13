@@ -34,7 +34,7 @@ h2 {
 }
 
 p {
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 a {
@@ -88,6 +88,10 @@ summary {
 
 option {
   color: var(--background);
+}
+
+hr {
+  border-bottom: dotted 1px var(--primary);
 }
 
 #spinner {
