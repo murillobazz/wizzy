@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [loading, setLoading] = useState(false);
+  const [loadingState, setLoadingState] = useState(false);
   const [loginStatus, setLoginStatus] = useState(false);
   
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const Login = () => {
   } = useForm()
 
   const onSubmit = async (data) => {
-    setLoading(true);
+    setLoadingState(true);
 
     try {
       const response = await axios.post(url, data);
@@ -35,7 +35,7 @@ const Login = () => {
       console.log(error);
     }
 
-    setLoading(false);
+    setLoadingState(false);
   }
 
   return (
@@ -55,7 +55,7 @@ const Login = () => {
           <input className="form-input p-2 rounded" type="password" name="password" id="password" {...register("password", { required: 'This field is required' })} />
           <p className="text-red-500">{errors.password?.message}</p>
         </label>
-        <input className="px-3 py-2 border rounded submit-btn border-amber-950" type="submit" value={loading ? 'Loading...' : 'Login'} disabled={loading} />
+        <input className="px-3 py-2 border rounded submit-btn border-amber-950" type="submit" value={loadingState ? 'Loading...' : 'Login'} disabled={loadingState} />
       </form>
     </div>
   )

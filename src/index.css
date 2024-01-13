@@ -27,7 +27,8 @@ body {
   padding: 0;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 2rem;
   color: var(--primary);
 }
@@ -65,6 +66,11 @@ a {
   box-shadow: none;
 }
 
+.submit-btn:disabled {
+  background-color: rgb(206, 185, 174);
+  cursor: default;
+}
+
 .form-input {
   background-color: var(--secondary);
   color: var(--background);
@@ -76,15 +82,19 @@ a {
   color: rgb(148 163 184);
 }
 
-.submit-btn:disabled {
-  background-color: darkgrey;
-  cursor: default;
-}
-
 summary {
   color: var(--secondary);
 }
 
 option {
   color: var(--background);
+}
+
+#spinner {
+  transform-origin:center;
+  animation: spin .75s infinite linear;
+}
+
+@keyframes spin {
+  100% { transform:rotate(360deg) }
 }
