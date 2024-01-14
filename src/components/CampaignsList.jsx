@@ -2,7 +2,7 @@ import propTypes from 'prop-types';
 import ListItem from './ListItem';
 
 
-const CampaignsList = ({campaigns}) => {
+const CampaignsList = ({campaigns, onClick}) => {
   if (campaigns && campaigns.length > 0) {
     return (
       <>
@@ -12,6 +12,7 @@ const CampaignsList = ({campaigns}) => {
             key={campaign.id}
             title={campaign.title}
             category={campaign.category}
+            onClick={() => onClick(campaign.id)}
           >
           </ListItem>
         ))}
@@ -29,6 +30,7 @@ const CampaignsList = ({campaigns}) => {
 
 CampaignsList.propTypes = {
   campaigns: propTypes.array,
+  onClick: propTypes.func,
 }
 
 export default CampaignsList;

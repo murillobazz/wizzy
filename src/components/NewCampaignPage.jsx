@@ -133,6 +133,7 @@ const NewCampaignPage = () => {
         </div>
         <input className="px-3 py-2 border rounded submit-btn border-amber-950" type="submit" value={loading ? 'Loading...' : 'Create'} disabled={loading} />
       </form>
+      {/* TODO -> Add other properties (level...) */}
       {submitStatus.length > 0 && <p className="text-lg">{submitStatus}</p>}
     </div>
   )

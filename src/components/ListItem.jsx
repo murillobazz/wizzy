@@ -7,7 +7,7 @@ const ListItem = (props) => {
         <p className="text-lg"><b>{props.title}</b></p>
         <p className="text-xs">A <b>{props.category}</b> adventure</p>
       </div>
-      <button><p className="font-bold">x</p></button>
+      <button><p onClick={props.onClick} className="font-bold text-red-700">x</p></button>
     </div>
   )
 }
@@ -17,6 +17,7 @@ ListItem.propTypes = {
   id: propTypes.string,
   title: propTypes.string,
   category: propTypes.string,
+  onClick: propTypes.func
 }
 
 export default ListItem;

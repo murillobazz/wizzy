@@ -12,7 +12,7 @@ Wizzy has its own API, developed by myself as well, it runs on [express.js](http
 - [x] Campaign creation
 - [x] Login page
 - [x] Sign out
-- [ ] Campaign deletion
+- [x] Campaign deletion
 - [ ] Register page
 - [ ] Campaign edit
 - [ ] Friend list
